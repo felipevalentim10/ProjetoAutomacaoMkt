@@ -5,19 +5,25 @@ using OpenQA.Selenium.DevTools;
 using OpenQA.Selenium.Support.UI;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ProjetoAutomacaoMkt.PageObjects.Oportunidade;
+using OpenQA.Selenium.Chrome;
 
 
 namespace ProjetoAutomacaoMkt.Steps.Oportunidade
 {
     public class OportunidadesSteps : Hooks
     {
-        public static void CriarOportunidade(string Email, string Senha)
+        public static void CriarOportunidade(string parametro1, string parametro2)
         {
+           
+            LoginSteps.ValidarLoginSucesso(parametro1, parametro2);
+            Thread.Sleep(6000);
 
-            LoginSteps.ValidarLoginSucesso(Email, Senha);
-            Thread.Sleep(10000);
-            Driver.FindElement(OportunidadePage.ClicarEmOportunidades).Click();
-            Thread.Sleep(7000);
+            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)Driver;
+            IWebElement element = Driver.FindElement(By.XPath("//a[@title='Oportunidades']"));
+            jsExecutor.ExecuteScript("arguments[0].click();", element);
+
+            
+            Thread.Sleep(3000);
             Driver.FindElement(OportunidadePage.ClicarEmCriar).Click();
             Thread.Sleep(3000);
             Driver.FindElement(OportunidadePage.ClicarEmClienteAlvo).Click();

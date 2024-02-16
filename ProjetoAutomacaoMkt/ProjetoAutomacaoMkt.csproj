@@ -29,13 +29,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Contas\" />
     <Folder Include="Features\Inicio\" />
     <Folder Include="Features\Lead\" />
-    <Folder Include="PageObjects\Contas\" />
     <Folder Include="PageObjects\Inicio\" />
     <Folder Include="PageObjects\Lead\" />
-    <Folder Include="Steps\Contas\" />
     <Folder Include="Steps\Inicio\" />
     <Folder Include="Steps\Lead\" />
   </ItemGroup>

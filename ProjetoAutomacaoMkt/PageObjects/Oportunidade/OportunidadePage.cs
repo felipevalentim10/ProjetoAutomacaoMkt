@@ -7,9 +7,10 @@ namespace ProjetoAutomacaoMkt.PageObjects.Oportunidade
     public class OportunidadePage
     {
 
-        //public static By ClicarEmOportunidades = By.XPath("//a[contains(@title, 'Oportunidades')]");//a[@title='Oportunidades']
         public static By ClicarEmOportunidades = By.XPath("//a[@title='Oportunidades']");
-        //public static By ClicarEmOportunidades = By.XPath("/html/body/div[4]/div[1]/section/div[1]/div[1]/one-appnav/div/one-app-nav-bar/nav/div/one-app-nav-bar-item-root[3]/a/span");
+
+
+
         public static By ClicarEmCriar = By.XPath("//*[@id='brandBand_1']/div/div/div/div/div[1]/div[1]/div[2]/ul/li");
         public static By ClicarEmClienteAlvo = By.XPath("/html/body/div[4]/div[2]/div/div[2]/div/div[2]/div/div/div[1]/div/div/div[1]/fieldset/div[1]/div[3]/label/div[2]/span");
         public static By ClicarEmAvançar = By.XPath("/html/body/div[4]/div[2]/div/div[2]/div/div[2]/div/div/div[2]/div/button[2]");

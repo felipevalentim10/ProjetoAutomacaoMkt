@@ -13,9 +13,10 @@ namespace ProjetoAutomacaoMkt.Features.Oportunidade
     public class OportunidadeFeature : Hooks
     {
         [TestMethod]
-        [TestCategory("Caso de teste XXX")] //Número gerado através do Azure ou JIRA
-        [TestCategory("User Story XXX")] //Número gerado através do Azure ou JIRA
-        //[DynamicData(nameof(RetornaInformacoes), DynamicDataSourceType.Method)]  //Retorna informações do banco de dados caso precise
+        [TestCategory("Caso de teste XXX")] //Número gerado através do JIRA
+        [TestCategory("User Story XXX")] //Número gerado através do JIRA
+        //[DynamicData(nameof(RetornaInformacoes), DynamicDataSourceType.Method)]  
+        //Retorna informações do banco de dados caso precise
 
         public void CriarOportunidade()
         {
@@ -43,7 +44,7 @@ namespace ProjetoAutomacaoMkt.Features.Oportunidade
             Report.LogMessage("Então um nova oportunidade seria criada");
             Report.LogMessage("E uma mensagem de sucesso na operação será exibida em tela");
             Report.LogMessage("");
-            //Report.Logmessage = Gera um HTML demonstando ações em tela com prints 
+            //Report.Logmessage = Gera um HTML demonstando ações em tela com prints
 
 
             OportunidadesSteps.CriarOportunidade("felipe.franca@sottelli.com.qamkt", "05312500Ff@@");
