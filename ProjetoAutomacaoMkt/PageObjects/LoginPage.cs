@@ -2,7 +2,7 @@
 using System;
 
 
-namespace ProjetoAutomacaoMkt
+namespace ProjetoAutomacaoMkt.PageObjects
 {
     public class LoginPage
     {
