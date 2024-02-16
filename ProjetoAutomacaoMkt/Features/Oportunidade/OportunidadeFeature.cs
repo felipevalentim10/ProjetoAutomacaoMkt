@@ -45,6 +45,7 @@ namespace ProjetoAutomacaoMkt.Features.Oportunidade
             Report.LogMessage("");
             //Report.Logmessage = Gera um HTML demonstando ações em tela com prints 
 
+
             OportunidadesSteps.CriarOportunidade("felipe.franca@sottelli.com.qamkt", "05312500Ff@@");
         }
     }
