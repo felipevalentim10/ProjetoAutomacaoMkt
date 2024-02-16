@@ -51,7 +51,7 @@ namespace ProjetoAutomacaoMkt.Steps.Oportunidade
             Driver.FindElement(OportunidadePage.CliqueNoCampoTerritorio).Click();
             Thread.Sleep(3000);
             Driver.FindElement(OportunidadePage.CliqueNoTerritorio).Click();
-            Thread.Sleep(3000);
+            Thread.Sleep(300);
             Driver.FindElement(OportunidadePage.CliqueAvancar).Click();
 
 
