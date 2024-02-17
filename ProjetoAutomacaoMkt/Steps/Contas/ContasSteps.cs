@@ -16,9 +16,14 @@ namespace ProjetoAutomacaoMkt.Steps.Conta
         {
 
             LoginSteps.ValidarLoginSucesso(Email, Senha);
-            Thread.Sleep(10000);
-            Driver.FindElement(ContasPage.BotaoContas).Click();
-            Thread.Sleep(7000);
+            Thread.Sleep(5000);
+
+            //Foi necessário essa primeira linha de código mais robusta pois automação com Salesforce da muito erro de Javascript nas linhas iniciais pela demora adocional no carregamento das telas 
+            IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)Driver;
+            IWebElement element = Driver.FindElement(By.XPath("//a[@title='Contas']"));
+            jsExecutor.ExecuteScript("arguments[0].click();", element);
+
+            
         }
     }
 }

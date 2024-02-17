@@ -12,52 +12,75 @@ namespace ProjetoAutomacaoMkt.Steps.Oportunidade
 {
     public class OportunidadesSteps : Hooks
     {
+        private static void AguardarAcao()
+        {
+            // Ação para que seja respesitado o time antes da execução da linha de código
+            Thread.Sleep(1000);
+        }
+
         public static void CriarOportunidade(string parametro1, string parametro2)
         {
-           
             LoginSteps.ValidarLoginSucesso(parametro1, parametro2);
-            Thread.Sleep(6000);
+            Thread.Sleep(5000);
 
+            //Foi necessário essa primeira linha de código mais robusta pois automação com Salesforce da muito erro de Javascript nas linhas iniciais pela demora adocional no carregamento das telas 
             IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)Driver;
             IWebElement element = Driver.FindElement(By.XPath("//a[@title='Oportunidades']"));
             jsExecutor.ExecuteScript("arguments[0].click();", element);
 
-            
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.ClicarEmCriar).Click();
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.ClicarEmClienteAlvo).Click();
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.ClicarEmAvançar).Click();
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.CliqueNoCampoConta).Click();
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.DigiteONomeDaConta).SendKeys("A Sementeira");
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.CliqueNaContaDigitada).Click();
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.CliqueNoCampoEndereco).Click();
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.DigiteONomeDoEndereco).SendKeys("R.NENZINHA ARANHA ESQC/AV.JOSÉ 1425");
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.CliqueNoEndereco).Click();
-            Thread.Sleep(3000);
-            Driver.FindElement(OportunidadePage.CliqueNoContato).Click();
-            Thread.Sleep(3000);
-            Driver.FindElement(OportunidadePage.CliqueNoContato).Click();
-            Thread.Sleep(3000);
+
+            AguardarAcao();
+            Driver.FindElement(OportunidadePage.CliqueNoCampoContato).Click();
+
+            AguardarAcao();
+            Driver.FindElement(OportunidadePage.CliqueNoContatoJoaoSilva).Click();
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.CliqueNoCampoNomeDaOportunidade).Click();
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.DigiteONomeDaOportunidade).SendKeys("Oportunidade automatizada");
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.CliqueNoCampoDataDaConclusao).Click();
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.DigiteADataDeConclusao).SendKeys("05/12/2024");
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.CliqueNoCampoTerritorio).Click();
-            Thread.Sleep(3000);
+
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.CliqueNoTerritorio).Click();
-            Thread.Sleep(300);
+            
+            AguardarAcao();
             Driver.FindElement(OportunidadePage.CliqueAvancar).Click();
 
 
