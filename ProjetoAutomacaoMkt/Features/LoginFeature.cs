@@ -21,7 +21,7 @@ namespace ProjetoAutomacaoMkt.Features
             Report.LogMessage("");
             //Report.LogMessage = Gera um HTML demostrando ações em tela com prints
 
-            LoginSteps.ValidarLoginSucesso("felipe.franca@sottelli.com.qamkt", "05312500Ff@@");
+            LoginSteps.ValidarLoginSucesso("**********", "*************");
 
         }
     }
