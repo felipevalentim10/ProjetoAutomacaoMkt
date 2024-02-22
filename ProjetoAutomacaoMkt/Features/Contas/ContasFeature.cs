@@ -25,7 +25,7 @@ namespace ProjetoAutomacaoMkt.Features.Contas
             //Report.Logmessage = Gera um HTML demonstando ações em tela com prints
 
 
-            ContasSteps.CriarConta("felipe.franca@sottelli.com.qamkt", "05312500Ff@@");
+            ContasSteps.CriarConta("*********", "******");
         }
     }
 }
